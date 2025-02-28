@@ -1,9 +1,22 @@
+/* Stil de bază pentru pagina web */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fce4ec; /* Fundal roz pal */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Definire animație */
 @keyframes floating {
     0% { transform: translateY(0px); }
     50% { transform: translateY(-10px); }
     100% { transform: translateY(0px); }
 }
 
-img {
+/* Aplică animația doar pe elementele cu clasa .floating-img */
+.floating-img {
     animation: floating 3s ease-in-out infinite;
+    position: absolute;
+    width: 150px; /* Ajustează dimensiunea */
 }
