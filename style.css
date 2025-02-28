@@ -1,22 +1,40 @@
-/* Stil de bază pentru pagina web */
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #fce4ec; /* Fundal roz pal */
-    text-align: center;
+/* Resetare stiluri pentru un aspect consistent */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-/* Definire animație */
+/* Fundal general */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Definim animația de plutire */
 @keyframes floating {
     0% { transform: translateY(0px); }
     50% { transform: translateY(-10px); }
     100% { transform: translateY(0px); }
 }
 
-/* Aplică animația doar pe elementele cu clasa .floating-img */
-.floating-img {
-    animation: floating 3s ease-in-out infinite;
-    position: absolute;
-    width: 150px; /* Ajustează dimensiunea */
+/* Stil pentru imagini */
+img {
+    position: absolute; /* Poziționează imaginile independent de fluxul normal */
+    top: 50px; /* Ajustează după nevoie */
+    left: 50px;
+    width: 150px; /* Dimensiune fixă pentru imagini */
+    height: auto; /* Păstrează proporțiile */
+    animation: floating 3s ease-in-out infinite; /* Aplică animația */
 }
+
+/* Container pentru imagini - dacă vrei să le controlezi mai bine */
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Înălțimea zonei unde vor pluti imaginile */
+    overflow: hidden; /* Previne ieșirea imaginilor din zonă */
+}
+
